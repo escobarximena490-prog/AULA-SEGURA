@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Serif Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-navy: #0b1f4b;
+  --color-navy-light: #163267;
+  --color-gold: #d4a017;
+  --color-gold-dark: #b8860b;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: #f8fafc;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+@media print {
+  header, nav, aside, .print\\:hidden {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+  }
+}
